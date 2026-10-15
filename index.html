@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>A Little Tangled Co | Handcrafted Crochet Accessories</title>
+  <meta name="description" content="Handcrafted crochet accessories by A Little Tangled Co." />
+
+  <!-- Fonts: Fraunces (serif headings) + DM Sans (clean navigation) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500&family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600&display=swap" rel="stylesheet" />
+
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- 1. NAVIGATION BAR -->
+  <header class="site-header">
+    <nav class="nav" id="nav" aria-label="Main navigation">
+      <a href="#" class="logo">a little tangled co</a>
+
+      <ul class="nav-links" id="nav-links">
+        <li><a href="#" class="nav-link" aria-current="page">Home</a></li>
+        <li><a href="#" class="nav-link" data-dialog="shop-dialog">Shop</a></li>
+        <li><a href="#" class="nav-link">Blog</a></li>
+        <li><a href="#" class="nav-link" data-dialog="contact-dialog">Contact</a></li>
+      </ul>
+
+      <div class="nav-actions">
+        <button class="icon-btn" type="button" aria-label="Search">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="11" cy="11" r="6.5"/><path d="M16 16l4.5 4.5"/></svg>
+        </button>
+        <button class="icon-btn" type="button" aria-label="Shopping cart">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 4h2.5l2.2 10.5h9.6L19.5 8H6.4"/><circle cx="9" cy="19" r="1.4"/><circle cx="17" cy="19" r="1.4"/></svg>
+        </button>
+        <button class="icon-btn menu-toggle" id="menu-toggle" type="button" aria-label="Open menu" aria-expanded="false" aria-controls="nav-links">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h16"/></svg>
+        </button>
+      </div>
+    </nav>
+  </header>
+
+  <!-- 2. HERO BANNER -->
+  <main>
+    <section class="hero" aria-labelledby="hero-title">
+      <div class="hero-text">
+        <h1 id="hero-title" class="hero-title">Handcrafted Crochet Accessories</h1>
+        <a href="#" class="btn" id="shop-now" data-dialog="shop-dialog">Shop Now</a>
+      </div>
+
+      <div class="hero-art">
+        <figure class="art art-main">
+          <img src="images/round-purse.jpg" alt="Handmade round crochet purse shaped like a rose" />
+        </figure>
+        <figure class="art art-side">
+          <img src="images/tote-black.jpg" alt="Handmade black crochet tote bag with a red rose" />
+        </figure>
+      </div>
+    </section>
+  </main>
+
+  <!-- Pop-up panels: filled in by script.js, hidden until opened -->
+  <dialog class="panel" id="shop-dialog" aria-labelledby="shop-title">
+    <button class="panel-close" type="button" aria-label="Close" data-close>&times;</button>
+    <h2 class="panel-title" id="shop-title">Shop</h2>
+    <p class="panel-sub">Every piece is handmade. Tap Order to message us on WhatsApp.</p>
+    <div class="product-grid" id="product-grid"></div>
+  </dialog>
+
+  <dialog class="panel panel-small" id="contact-dialog" aria-labelledby="contact-title">
+    <button class="panel-close" type="button" aria-label="Close" data-close>&times;</button>
+    <h2 class="panel-title" id="contact-title">Place an order</h2>
+    <p class="panel-sub">Call or message Abdullah to order any piece.</p>
+    <p class="contact-name" id="contact-name"></p>
+    <p class="contact-phone" id="contact-phone"></p>
+    <div class="contact-actions">
+      <a class="btn" id="contact-call" href="#">Call now</a>
+      <a class="btn btn-light" id="contact-whatsapp" href="#" target="_blank" rel="noopener">WhatsApp</a>
+    </div>
+  </dialog>
+
+  <script src="script.js"></script>
+</body>
+</html>
